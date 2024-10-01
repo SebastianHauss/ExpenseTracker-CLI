@@ -1,6 +1,6 @@
 # ExpenseTracker
 
-**ExpenseTracker** is a simple command-line application for tracking your expenses. It allows users to add, view, update, delete expenses and view summaries of their expense. You can also track your spending by month.
+**ExpenseTracker** is a simple command-line application for tracking your expenses. It allows users to add, view, update and delete expenses. You can also view summaries of your expense and track your spending by month.
 
 ## Features
 - Add an expense with a description, amount, category, and date.
