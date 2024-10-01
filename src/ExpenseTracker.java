@@ -88,7 +88,7 @@ public class ExpenseTracker {
     }
 
     public static void printExpense(Expense expense) {
-        System.out.printf("%-4d %-12s %-12s € %-9.2f %-10s%n",
+        System.out.printf("%-4d %-12s %-12s $ %-9.2f %-10s%n",
                 expense.getId(),
                 expense.getDate(),
                 expense.getDescription(),
