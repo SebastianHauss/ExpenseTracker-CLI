@@ -7,8 +7,6 @@
 - Delete or update existing expenses by their ID.
 - View a summary of all expenses.
 - View a summary of expenses for a specific month.
-- Set a monthly budget and get a warning when you exceed it.
-- Export expenses to a CSV file.
 
 ## Installation
 
