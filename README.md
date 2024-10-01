@@ -1,7 +1,8 @@
-
 # ExpenseTracker
 
 **ExpenseTracker** is a command-line app to manage and track expenses. You can add, view, update, delete expenses, and see spending summaries by month.
+
+This project is part of the **[roadmap.sh](https://roadmap.sh)** community. You can view it [here](https://roadmap.sh/projects/expense-tracker).
 
 ## Features
 - Add an expense with description, amount, category, and date.
