@@ -20,6 +20,22 @@ public class ExpenseStorage {
 
     // Reads existing expenses from a file ("expenses.json") and loads them into the expenses list.
     public static void loadExpenses() {
+        File file = new File(FILE_PATH);
+
+        // Check if file exists, if not, create empty file
+        if (!file.exists()) {
+            try (FileWriter writer = new FileWriter(FILE_PATH)) {
+                writer.write("[]"); // Initialize the file with an empty JSON array
+                expenses = new ArrayList<>();
+                System.out.println("File created: " + FILE_PATH);
+
+            } catch (IOException e) {
+                System.out.println("Error creating the file.");
+                return;
+            }
+        }
+
+        // Load expenses from the file
         try (FileReader reader = new FileReader(FILE_PATH)) {
             expenses = gson.fromJson(reader, new TypeToken<List<Expense>>() {
             }.getType());
@@ -27,7 +43,7 @@ public class ExpenseStorage {
                 expenses = new ArrayList<>();
             }
         } catch (IOException e) {
-            System.out.println("Error loading expenses.");
+            System.out.println("Error reading the file");
         }
 
         for (Expense expense : expenses) {

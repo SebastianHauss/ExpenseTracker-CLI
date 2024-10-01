@@ -88,7 +88,7 @@ public class ExpenseTracker {
     }
 
     public static void printExpense(Expense expense) {
-        System.out.printf("%-4d %-12s %-12s $%-9.2f %-10s%n",
+        System.out.printf("%-4d %-12s %-12s € %-9.2f %-10s%n",
                 expense.getId(),
                 expense.getDate(),
                 expense.getDescription(),
@@ -98,7 +98,7 @@ public class ExpenseTracker {
 
     private static void handleDeleteExpense(String[] commandParts) {
         if (commandParts.length < 3 || !commandParts[1].equals("--id")) {
-            System.out.println("Invalid command. Use: delete --id <expenseId> or delete --all");
+            System.out.println("Invalid command. Use: delete --id <expenseId>");
             return;
         }
         try {
@@ -120,7 +120,7 @@ public class ExpenseTracker {
             // Summary of all expenses
             List<Expense> expenses = ExpenseStorage.getAllExpenses();
             double total = expenses.stream().mapToDouble(Expense::getAmount).sum();
-            System.out.println("Total expenses: $ " + total);
+            System.out.println("Total expenses: € " + total);
 
             // Summary of monthly expenses
         } else if (commandParts.length == 3 && commandParts[1].equals("--month")) {
